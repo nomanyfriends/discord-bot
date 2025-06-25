@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Discord - No Many Friends</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9f1f7; /* Warna latar belakang pastel */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #5a8eab; /* Warna judul yang lembut */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            background-color: #ffffff; /* Warna kolom putih */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .column:hover {
+            transform: translateY(-5px);
+        }
+        .column h2 {
+            color: #5a8eab; /* Warna judul kolom yang lembut */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .column p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #5a8eab; /* Warna tautan yang lembut */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color: #5a8eab; /* Warna tombol yang lembut */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #4a7a92; /* Warna tombol saat hover */
+        }
+        .icon {
+            margin-right: 10px;
+            color: #5a8eab; /* Warna ikon yang lembut */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Selamat Datang di Bot Discord No Many Friends</h1>
+    <p>
+        <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands" target="_blank">
+            <i class="fab fa-discord"></i> Bergabung dengan Server Kami
+        </a>
+    </p>
+</header>
+
+<div class="container">
+    <div class="column" id="verify">
+        <h2><i class="fas fa-check-circle icon"></i>/verify</h2>
+        <p>Perintah ini digunakan untuk memverifikasi diri Anda agar dapat mengakses server.</p>
+    </div>
+
+    <div class="column" id="help">
+        <h2><i class="fas fa-question-circle icon"></i>/help</h2>
+        <p>Perintah ini memberikan daftar semua perintah yang tersedia untuk bot.</p>
+    </div>
+
+    <div class="column" id="purge">
+        <h2><i class="fas fa-trash-alt icon"></i>/purge</h2>
+        <p>Perintah ini memungkinkan pengguna dengan izin yang sesuai untuk menghapus pesan dari saluran.</p>
+    </div>
+
+    <div class="column" id="announcement">
+        <h2><i class="fas fa-bullhorn icon"></i>/announcement</h2>
+        <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Ikuti kami di <a href="https://www.youtube.com/@nomanyfriends" target="_blank">YouTube</a> untuk lebih banyak konten!</p>
+</footer>
+
+</body>
+</html>
