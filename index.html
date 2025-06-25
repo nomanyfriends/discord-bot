@@ -69,13 +69,19 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center; /* Menyelaraskan ikon dan teks secara vertikal */
+            margin: 20px auto; /* Menyelaraskan tombol di tengah */
+            max-width: 200px; /* Mengatur lebar maksimum tombol */
         }
         .button:hover {
             background-color: #4a7a92; /* Warna tombol saat hover */
         }
         .icon {
-            margin-right: 10px;
-            color: #5a8eab; /* Warna ikon yang lembut */
+            margin-right: 10px; /* Memberikan jarak antara ikon dan teks */
+        }
+        .discord-icon {
+            color: #ffffff; /* Warna ikon Discord yang kontras dengan latar belakang */
         }
     </style>
 </head>
@@ -83,11 +89,6 @@
 
 <header>
     <h1>No Many Friends</h1>
-    <p>
-        <a class="button" href="https://dsc.gg/nomanyfriends" target="_blank">
-            <i class="fab fa-discord"></i> No Many Friends
-        </a>
-    </p>
 </header>
 
 <div class="container">
@@ -111,6 +112,13 @@
         <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu.</p>
     </div>
 </div>
+
+<!-- Tombol dipindahkan ke bawah setelah kolom-kolom -->
+<p style="text-align: center;">
+    <a class="button" href="https://dsc.gg/nomanyfriends" target="_blank">
+        <i class="fab fa-discord icon discord-icon"></i> Our Server
+    </a>
+</p>
 
 <footer>
     <p>Ikuti kami di <a href="https://www.youtube.com/@nomanyfriends" target="_blank">YouTube</a> untuk lebih banyak konten!</p>
