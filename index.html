@@ -37,9 +37,11 @@
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            text-decoration: none; /* Menghilangkan garis bawah pada tautan */
         }
         .column:hover {
             transform: translateY(-5px);
+            cursor: pointer; /* Menunjukkan bahwa kolom dapat diklik */
         }
         .column h2 {
             color: #5a8eab; /* Warna judul kolom yang lembut */
@@ -50,6 +52,13 @@
             margin: 5px 0;
             line-height: 1.6;
         }
+        .column a {
+            text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+            color: inherit; /* Menggunakan warna teks dari elemen induk */
+        }
+        .column:hover a {
+            text-decoration: none; /* Pastikan tidak ada garis bawah saat hover */
+        }
         footer {
             text-align: center;
             margin-top: 20px;
@@ -57,10 +66,16 @@
         }
         a {
             color: #5a8eab; /* Warna tautan yang lembut */
-            text-decoration: none;
         }
         a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Garis bawah hanya untuk tautan di luar kolom */
+        }
+        footer a {
+            text-decoration: none; /* Menghilangkan garis bawah pada tautan di footer */
+            color: inherit; /* Menggunakan warna teks dari elemen induk */
+        }
+        footer a:hover {
+            text-decoration: underline; /* Garis bawah saat hover pada tautan di footer */
         }
     </style>
 </head>
@@ -73,23 +88,31 @@
 
 <div class="container">
     <div class="column" id="verify">
-        <h2><a href="https://example.com/verify" target="_blank"><i class="fas fa-check-circle icon"></i> /verify</a></h2>
-        <p>Perintah ini digunakan untuk memverifikasi diri Anda agar dapat mengakses server.</p>
+        <a href="https://example.com/verify" target="_blank">
+            <h2><i class="fas fa-check-circle icon"></i> /verify</h2>
+            <p>Perintah ini digunakan untuk memverifikasi diri Anda agar dapat mengakses server.</p>
+        </a>
     </div>
 
     <div class="column" id="help">
-        <h2><a href="https://example.com/help" target="_blank"><i class="fas fa-question-circle icon"></i> /help</a></h2>
-        <p>Perintah ini memberikan daftar semua perintah yang tersedia untuk bot.</p>
+        <a href="https://example.com/help" target="_blank">
+            <h2><i class="fas fa-question-circle icon"></i> /help</h2>
+            <p>Perintah ini memberikan daftar semua perintah yang tersedia untuk bot.</p>
+        </a>
     </div>
 
     <div class="column" id="purge">
-        <h2><a href="https://example.com/purge" target="_blank"><i class="fas fa-trash-alt icon"></i> /purge</a></h2>
-        <p>Perintah ini memungkinkan pengguna dengan izin yang sesuai untuk menghapus pesan dari saluran.</p>
+        <a href="https://example.com/purge" target="_blank">
+            <h2><i class="fas fa-trash-alt icon"></i> /purge</h2>
+            <p>Perintah ini memungkinkan pengguna dengan izin yang sesuai untuk menghapus pesan dari saluran.</p>
+        </a>
     </div>
 
     <div class="column" id="announcement">
-        <h2><a href="announcement-create.html"><i class="fas fa-bullhorn icon"></i> /announcement</a></h2>
-        <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu.</p>
+        <a href="announcement-create.html">
+            <h2><i class="fas fa-bullhorn icon"></i> /announcement</h2>
+            <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu.</p>
+        </a>
     </div>
 </div>
 
