@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcement Create - No Many Friends</title>
+    <title>Announcement - No Many Friends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -21,6 +21,7 @@
         nav {
             padding: 10px; /* Ruang di dalam menu */
             margin-bottom: 10px; /* Jarak antara menu dan header */
+            position: relative; /* Mengatur posisi relatif untuk dropdown */
         }
         nav ul {
             list-style-type: none; /* Menghilangkan bullet pada list */
@@ -95,6 +96,10 @@
             text-align: center; /* Rata tengah */
             margin: 20px 0; /* Margin atas dan bawah */
         }
+        h3 {
+            color: #5a8eab; /* Warna teks untuk h3 */
+            margin: 20px 0; /* Margin atas dan bawah */
+        }
         p {
             margin: 10px 0; /* Margin atas dan bawah */
             line-height: 1.6; /* Jarak antar baris */
@@ -104,6 +109,16 @@
             padding: 15px; /* Ruang di dalam */
             border-radius: 5px; /* Sudut melengkung */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        }
+        .description {
+            background-color: rgba(90, 142, 171, 0.1); /* Latar belakang untuk deskripsi di bawah h2 */
+            padding: 10px; /* Ruang di dalam deskripsi */
+            border-radius: 5px; /* Sudut melengkung */
+            margin-top: 10px; /* Jarak atas */
+        }
+        .description-h1 {
+            background-color: transparent; /* Menghapus latar belakang untuk deskripsi di bawah h1 */
+            margin-top: 10px; /* Jarak atas */
         }
         li {
             margin: 5px 0; /* Margin atas dan bawah */
@@ -152,14 +167,37 @@
 
 <header>
     <h1>No Many Friends</h1>
-    <p class="description">Bot Discord ini dirancang untuk membantu Anda mengelola server dengan lebih baik, memberikan perintah yang berguna, dan meningkatkan pengalaman komunitas Anda.</p>
+    <p class="description-h1">Bot Discord ini dirancang untuk membantu Anda mengelola server dengan lebih baik, memberikan perintah yang berguna, dan meningkatkan pengalaman komunitas Anda.</p>
 </header>
 
-<h2>/announcement-create</h2>
+<!-- Menambahkan h2 baru dengan tulisan "Announcement" -->
+<h2>Announcement</h2>
+<p class="description">Fitur pengumuman memungkinkan Anda untuk membuat, mengedit, dan menghapus pengumuman di server Discord Anda. Dengan perintah ini, Anda dapat dengan mudah mengelola informasi penting yang perlu disampaikan kepada anggota server.</p>
+
+<!-- Mengubah h2 yang ada menjadi h3 -->
+<h3>/announcement-create</h3>
 <div class="content">
     <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu. Untuk menggunakan perintah ini, Anda perlu:</p>
     <ol>
         <li>Ketik <code>/announcement-create [pesan]</code> untuk mengirim pengumuman.</li>
+        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+    </ol>
+</div>
+
+<h3>/announcement-update</h3>
+<div class="content">
+    <p>Perintah ini digunakan untuk memperbarui pengumuman yang sudah ada. Untuk menggunakan perintah ini, Anda perlu:</p>
+    <ol>
+        <li>Ketik <code>/announcement-update [id pengumuman] [pesan]</code> untuk memperbarui pengumuman.</li>
+        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+    </ol>
+</div>
+
+<h3>/announcement-delete</h3>
+<div class="content">
+    <p>Perintah ini digunakan untuk menghapus pengumuman yang sudah ada. Untuk menggunakan perintah ini, Anda perlu:</p>
+    <ol>
+        <li>Ketik <code>/announcement-delete [id pengumuman]</code> untuk menghapus pengumuman.</li>
         <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
     </ol>
 </div>
