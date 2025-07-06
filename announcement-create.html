@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcement Command - No Many Friends</title>
+    <title>Announcement Create - No Many Friends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -19,9 +19,6 @@
             margin-bottom: 20px;
         }
         nav {
-            display: flex; /* Menggunakan Flexbox untuk menu */
-            justify-content: flex-start; /* Rata kiri */
-            flex-wrap: wrap; /* Membungkus item jika tidak muat */
             padding: 10px; /* Ruang di dalam menu */
             margin-bottom: 10px; /* Jarak antara menu dan header */
         }
@@ -31,10 +28,9 @@
             margin: 0; /* Menghilangkan margin */
             display: flex; /* Mengatur list menjadi horizontal */
             justify-content: flex-start; /* Rata kiri */
-            flex-wrap: wrap; /* Membungkus item jika tidak muat */
         }
         nav ul li {
-            margin-right: 20px; /* Jarak antar item menu */
+            margin-right: 10px; /* Jarak antar item menu */
         }
         nav a {
             color: #5a8eab; /* Warna teks tautan */
@@ -51,6 +47,8 @@
         .dropdown {
             display: none; /* Menyembunyikan dropdown secara default */
             position: absolute; /* Mengatur posisi dropdown */
+            top: 100%; /* Menempatkan dropdown di bawah tombol */
+            left: 0; /* Menjaga dropdown sejajar dengan tombol */
             background-color: white; /* Warna latar belakang dropdown */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
             z-index: 1; /* Menempatkan dropdown di atas elemen lain */
@@ -58,9 +56,6 @@
         .dropdown a {
             display: block; /* Menampilkan tautan dalam dropdown sebagai blok */
             padding: 10px; /* Ruang di dalam tautan dropdown */
-        }
-        .dropdown a:hover {
-            background-color: rgba(90, 142, 171, 0.2); /* Efek latar belakang saat hover */
         }
         .dropdown-button {
             display: none; /* Menyembunyikan tombol dropdown secara default */
@@ -142,13 +137,13 @@
 <nav>
     <button class="dropdown-button" onclick="toggleDropdown()">Menu</button>
     <ul id="menu">
-        <li><a href="#home">Beranda</a></li>
+        <li><a href="https://nomanyfriends.github.io/discord-bot/">Beranda</a></li>
         <li><a href="#features">Fitur</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
     </ul>
     <div class="dropdown" id="dropdown">
-        <a href="#home">Beranda</a>
+        <a href="https://nomanyfriends.github.io/discord-bot/">Beranda</a>
         <a href="#features">Fitur</a>
         <a href="#about">Tentang</a>
         <a href="#contact">Kontak</a>
@@ -156,7 +151,7 @@
 </nav>
 
 <header>
-    <h1><a href="https://nomanyfriends.github.io/discord-bot/">No Many Friends</a></h1>
+    <h1>No Many Friends</h1>
     <p class="description">Bot Discord ini dirancang untuk membantu Anda mengelola server dengan lebih baik, memberikan perintah yang berguna, dan meningkatkan pengalaman komunitas Anda.</p>
 </header>
 
@@ -185,13 +180,18 @@
 <script>
     function toggleDropdown() {
         var dropdown = document.getElementById("dropdown");
-        if (dropdown.style.display === "block") {
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    // Menutup dropdown saat mengklik di luar
+    window.onclick = function(event) {
+        var dropdown = document.getElementById("dropdown");
+        var button = document.querySelector(".dropdown-button");
+        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
             dropdown.style.display = "none";
-        } else {
-            dropdown.style.display = "block";
         }
     }
 </script>
-    
+
 </body>
 </html>
