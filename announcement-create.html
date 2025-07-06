@@ -48,6 +48,37 @@
         nav a:hover {
             text-decoration: underline; /* Garis bawah saat hover pada tautan */
         }
+        .dropdown {
+            display: none; /* Menyembunyikan dropdown secara default */
+            position: absolute; /* Mengatur posisi dropdown */
+            background-color: white; /* Warna latar belakang dropdown */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+            z-index: 1; /* Menempatkan dropdown di atas elemen lain */
+        }
+        .dropdown a {
+            display: block; /* Menampilkan tautan dalam dropdown sebagai blok */
+            padding: 10px; /* Ruang di dalam tautan dropdown */
+        }
+        .dropdown a:hover {
+            background-color: rgba(90, 142, 171, 0.2); /* Efek latar belakang saat hover */
+        }
+        .dropdown-button {
+            display: none; /* Menyembunyikan tombol dropdown secara default */
+            background-color: #5a8eab; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghilangkan border */
+            padding: 10px; /* Ruang di dalam tombol */
+            border-radius: 5px; /* Sudut melengkung */
+            cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Menyembunyikan menu horizontal pada layar kecil */
+            }
+            .dropdown-button {
+                display: block; /* Menampilkan tombol dropdown pada layar kecil */
+            }
+        }
         h1 {
             color: #5a8eab; /* Warna judul yang lembut */
             font-size: 2.5em;
@@ -109,12 +140,19 @@
 <body>
 
 <nav>
-    <ul>
-        <li><a href="https://nomanyfriends.github.io/discord-bot/">Beranda</a></li>
+    <button class="dropdown-button" onclick="toggleDropdown()">Menu</button>
+    <ul id="menu">
+        <li><a href="#home">Beranda</a></li>
         <li><a href="#features">Fitur</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
     </ul>
+    <div class="dropdown" id="dropdown">
+        <a href="#home">Beranda</a>
+        <a href="#features">Fitur</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+    </div>
 </nav>
 
 <header>
@@ -144,5 +182,16 @@
     <p>Made by Crystal</p>
 </footer>
 
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdown");
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+</script>
+    
 </body>
 </html>
