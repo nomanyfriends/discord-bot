@@ -13,10 +13,15 @@
             color: #333;
             margin: 0;
             padding: 20px;
+            display: flex; /* Menggunakan flexbox untuk tata letak */
+            flex-direction: column; /* Mengatur arah flex menjadi kolom */
+        }
+        .container {
+            display: flex; /* Menggunakan flexbox untuk konten utama */
+            flex-grow: 1; /* Membuat konten utama mengambil sisa ruang */
         }
         nav {
             width: 200px; /* Lebar menu */
-            float: left; /* Mengapungkan menu ke kiri */
             margin-right: 20px; /* Jarak antara menu dan konten */
         }
         nav ul {
@@ -71,6 +76,7 @@
             padding: 15px; /* Ruang di dalam */
             border-radius: 5px; /* Sudut melengkung */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            flex-grow: 1; /* Membuat konten mengambil sisa ruang */
         }
         code {
             background-color: #f8f8f8; /* Warna latar belakang untuk kode */
@@ -82,6 +88,7 @@
             text-align: center;
             margin-top: 20px;
             font-size: 0.9em;
+            clear: both; /* Menghindari tumpang tindih dengan elemen lain */
         }
         a {
             color: #5a8eab; /* Warna tautan yang lembut */
@@ -94,27 +101,31 @@
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#announcement-create">Buat Pengumuman</a></li>
-        <li><a href="#other-command">Perintah Lain</a></li>
-        <li><a href="#settings">Pengaturan</a></li>
-        <li><a href="#help">Bantuan</a></li>
-    </ul>
-</nav>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="#announcement-create">Buat Pengumuman</a></li>
+            <li><a href="#other-command">Perintah Lain</a></li>
+            <li><a href="#settings">Pengaturan</a></li>
+            <li><a href="#help">Bantuan</a></li>
+        </ul>
+    </nav>
 
-<header>
-    <h1><a href="https://nomanyfriends.github.io/discord-bot/">No Many Friends</a></h1>
-    <p class="description">Bot Discord ini dirancang untuk membantu Anda mengelola server dengan lebih baik, memberikan perintah yang berguna, dan meningkatkan pengalaman komunitas Anda.</p>
-</header>
+    <div class="main-content">
+        <header>
+            <h1><a href="https://nomanyfriends.github.io/discord-bot/">No Many Friends</a></h1>
+            <p class="description">Bot Discord ini dirancang untuk membantu Anda mengelola server dengan lebih baik, memberikan perintah yang berguna, dan meningkatkan pengalaman komunitas Anda.</p>
+        </header>
 
-<h2 id="announcement-create">/announcement-create</h2>
-<div class="content">
-    <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu. Untuk menggunakan perintah ini, Anda perlu:</p>
-    <ol>
-        <li>Ketik <code>/announcement-create [pesan]</code> untuk mengirim pengumuman.</li>
-        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
-    </ol>
+        <h2 id="announcement-create">/announcement-create</h2>
+        <div class="content">
+            <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu. Untuk menggunakan perintah ini, Anda perlu:</p>
+            <ol>
+                <li>Ketik <code>/announcement-create [pesan]</code> untuk mengirim pengumuman.</li>
+                <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+            </ol>
+        </div>
+    </div>
 </div>
 
 <!-- Teks footer ditambahkan di sini -->
