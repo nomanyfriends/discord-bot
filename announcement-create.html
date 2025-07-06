@@ -19,6 +19,9 @@
             margin-bottom: 20px;
         }
         nav {
+            display: flex; /* Menggunakan Flexbox untuk menu */
+            justify-content: flex-start; /* Rata kiri */
+            flex-wrap: wrap; /* Membungkus item jika tidak muat */
             padding: 10px; /* Ruang di dalam menu */
             margin-bottom: 10px; /* Jarak antara menu dan header */
         }
@@ -28,9 +31,10 @@
             margin: 0; /* Menghilangkan margin */
             display: flex; /* Mengatur list menjadi horizontal */
             justify-content: flex-start; /* Rata kiri */
+            flex-wrap: wrap; /* Membungkus item jika tidak muat */
         }
         nav ul li {
-            margin-right: 15px; /* Jarak antar item menu */
+            margin-right: 20px; /* Jarak antar item menu */
         }
         nav a {
             color: #5a8eab; /* Warna teks tautan */
