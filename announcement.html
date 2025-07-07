@@ -32,6 +32,7 @@
         }
         nav ul li {
             margin-right: 10px; /* Jarak antar item menu */
+            position: relative; /* Mengatur posisi relatif untuk sub-menu */
         }
         nav a {
             color: #5a8eab; /* Warna teks tautan */
@@ -145,6 +146,16 @@
         a:hover {
             text-decoration: underline; /* Garis bawah hanya untuk tautan saat hover */
         }
+        /* Gaya untuk sub-menu */
+        nav ul li:hover .dropdown {
+            display: block; /* Menampilkan dropdown saat item menu di-hover */
+        }
+        /* Gaya untuk gambar */
+        .content img {
+            max-width: 100%; /* Membuat gambar responsif */
+            height: auto; /* Menjaga rasio aspek gambar */
+            margin-top: 5px; /* Jarak atas untuk gambar */
+        }
     </style>
 </head>
 <body>
@@ -153,13 +164,24 @@
     <button class="dropdown-button" onclick="toggleDropdown()">Menu</button>
     <ul id="menu">
         <li><a href="https://nomanyfriends.github.io/discord-bot/">Beranda</a></li>
-        <li><a href="#features">Fitur</a></li>
+        <li>
+            <a href="#features">Fitur</a>
+            <div class="dropdown">
+                <a href="#feature1">Fitur 1</a>
+                <a href="#feature2">Fitur 2</a>
+                <a href="#feature3">Fitur 3</a>
+            </div>
+        </li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
     </ul>
     <div class="dropdown" id="dropdown">
         <a href="https://nomanyfriends.github.io/discord-bot/">Beranda</a>
-        <a href="#features">Fitur</a>
+        <div class="dropdown">
+            <a href="#feature1">Fitur 1</a>
+            <a href="#feature2">Fitur 2</a>
+            <a href="#feature3">Fitur 3</a>
+        </div>
         <a href="#about">Tentang</a>
         <a href="#contact">Kontak</a>
     </div>
@@ -177,19 +199,43 @@
 <!-- Mengubah h2 yang ada menjadi h3 -->
 <h3>/announcement-create</h3>
 <div class="content">
-    <p>Perintah ini digunakan untuk membuat pengumuman di saluran tertentu. Untuk menggunakan perintah ini, Anda perlu:</p>
+    <p>Perintah ini digunakan untuk membuat pengumuman di saluran Discord. Berikut langkah-langkahnya:</p>
     <ol>
-        <li>Ketik <code>/announcement-create [pesan]</code> untuk mengirim pengumuman.</li>
-        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+        <li>
+            Ketik <code>/announcement-create</code> untuk memulai.
+            <img src="https://via.placeholder.com/150" alt="Contoh Gambar 1">
+        </li>
+        <li>
+            Pilih jenis pengumuman: <code>Text</code> untuk teks biasa atau <code>Embed</code> untuk format embed.
+        </li>
+        <li>
+            Pilih saluran teks yang ingin Anda gunakan untuk mengirim pengumuman.
+        </li>
+        <li>
+            Jika memilih <code>Text</code>, masukkan teks pengumuman Anda. Ketik <code>cancel</code> untuk membatalkan.
+        </li>
+        <li>
+            Jika memilih <code>Embed</code>, ikuti panduan untuk menambahkan judul, deskripsi, dan footer sesuai kebutuhan. Ketik <code>cancel</code> untuk membatalkan.
+        </li>
+        <li>
+            Setelah semua informasi dimasukkan, pengumuman akan dikirim ke saluran yang dipilih.
+        </li>
     </ol>
+    <p>Gunakan perintah ini untuk menyampaikan informasi penting kepada anggota server Anda dengan mudah.</p>
 </div>
 
-<h3>/announcement-update</h3>
+<h3>/announcement-edit</h3>
 <div class="content">
     <p>Perintah ini digunakan untuk memperbarui pengumuman yang sudah ada. Untuk menggunakan perintah ini, Anda perlu:</p>
     <ol>
-        <li>Ketik <code>/announcement-update [id pengumuman] [pesan]</code> untuk memperbarui pengumuman.</li>
-        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+        <li>
+            Ketik <code>/announcement-update [id pengumuman] [pesan]</code> untuk memperbarui pengumuman.
+            <img src="https://via.placeholder.com/150" alt="Contoh Gambar 3">
+        </li>
+        <li>
+            Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.
+            <img src="https://via.placeholder.com/150" alt="Contoh Gambar 4">
+        </li>
     </ol>
 </div>
 
@@ -197,8 +243,14 @@
 <div class="content">
     <p>Perintah ini digunakan untuk menghapus pengumuman yang sudah ada. Untuk menggunakan perintah ini, Anda perlu:</p>
     <ol>
-        <li>Ketik <code>/announcement-delete [id pengumuman]</code> untuk menghapus pengumuman.</li>
-        <li>Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.</li>
+        <li>
+            Ketik <code>/announcement-delete [id pengumuman]</code> untuk menghapus pengumuman.
+            <img src="https://via.placeholder.com/150" alt="Contoh Gambar 5">
+        </li>
+        <li>
+            Pastikan Anda memiliki izin yang diperlukan untuk menggunakan perintah ini.
+            <img src="https://via.placeholder.com/150" alt="Contoh Gambar 6">
+        </li>
     </ol>
 </div>
 
